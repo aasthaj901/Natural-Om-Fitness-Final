@@ -1,0 +1,1051 @@
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Navbar Styles */
+.navbar {
+  background-color: #4f4848; /* Dark grey background */
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px; /* Navbar height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Space between elements */
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Navbar Brand (Logo and Title) */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.dumbbell-icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: rgb(174, 166, 6); /* Complementary color to the dark grey */
+  font-family: "Playfair Display", serif;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex; /* Ensures horizontal layout */
+  justify-content: space-between;
+  margin-left: 20px;
+  list-style: none;
+  margin-left: auto; /* Ensures the links are pushed to the right */
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Smooth transition */
+  text-transform: capitalize;
+}
+
+/* Hover Effect for Navbar Links */
+.nav-link:hover {
+  color: rgb(174, 166, 6); /* Color complementary to the title */
+  background-color: rgba(174, 166, 6, 0.2); /* Slight background color */
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #4f4848;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-custom {
+    width: 100%; /* Make buttons full width on smaller screens */
+    padding: 10px; /* Reduce padding for mobile */
+  }
+}
+
+
+/* Body Styles */
+body {
+  font-family: 'Playfair', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Home Container Styles */
+/* Home Section Styles */
+/* Home Container */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  height: 100vh; /* Adjust for navbar height */
+  background-image: url('/src/assets/img/first.png'); /* Set your background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+}
+/* Fully Responsive Home Page */
+
+/* Home Section h1 */
+.home-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+.home-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+.home-container p {
+  color: white;
+  text-align: center;
+  max-width: 80%; /* Ensures text wraps properly on smaller screens */
+  width: auto;
+  margin: 20px auto; /* Centers text on all screen sizes */
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Button Container */
+.btn-container {
+  display: flex;
+  gap: 15px;
+ 
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Wraps buttons on smaller screens */
+}
+
+/* Custom Button */
+.btn-custom {
+  background-color: rgb(174, 166, 6);
+  color: white;
+  border: 2px solid white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  margin-right: 560px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: auto; /* Makes buttons adjust dynamically */
+}
+
+/* Button Hover Effect */
+.btn-custom:hover {
+  background-color: rgb(125, 124, 112);
+  border-color: rgb(174, 166, 6);
+}
+
+/* Bubble Container */
+.bubble-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* Ensures bubbles wrap on smaller screens */
+}
+
+.bubble {
+  width: 120px; /* Adjusted for better responsiveness */
+  height: 120px;
+  background-color: rgba(40, 167, 69, 0.3);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid #dfff00;
+  box-shadow: 0 0 10px #dfff00;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Bubble Hover Effect */
+.bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #dfff00, 0 0 30px #dfff00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-container h1 {
+    font-size: 2rem;
+  }
+
+  .home-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .home-container p {
+    font-size: 0.9rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+
+  .btn-custom {
+    width: 90%; /* Full width on small screens */
+    text-align: center;
+    padding: 10px;
+  }
+
+  .bubble {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+}
+
+
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px; /* Adds space below the title */
+  color: rgb(174, 166, 6);
+}
+
+.membership-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.membership-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Transparent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.membership-card.flex-row {
+  flex-direction: row;
+}
+
+.membership-card.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.membership-image {
+  width: 30%; /* Smaller image width */
+  height: 180px; /* Reduced image height */
+  object-fit: cover; /* Ensures images are cropped proportionally */
+  border-radius: 10px;
+}
+
+.membership-info {
+  width: 65%; /* Adjust text section width to balance layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black for the card */
+  color: #fff; /* White text for contrast */
+  border-radius: 10px;
+}
+
+.membership-info h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffcc00; /* Accent color for headings */
+}
+
+.membership-info p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #eee; /* Softer white for body text */
+}
+
+/* Add responsiveness */
+@media (max-width: 1024px) {
+  .membership-card {
+    flex-direction: column; /* Stacks the card vertically on medium-sized screens */
+    width: 100%; /* Makes the cards fill the container */
+  }
+  
+  .membership-info,
+  .membership-image {
+    width: 100%; /* Ensures both image and text sections take full width */
+    height: auto; /* Adjusts the image height */
+  }
+  
+  .membership-image {
+    height: 150px; /* Smaller image height on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .membership-info {
+    padding: 10px; /* Less padding on mobile */
+  }
+  
+  .membership-image {
+    height: 120px; /* Even smaller image height on mobile */
+  }
+}
+/* General Styling */
+/* General Typography */
+h1.about-title, .about-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+.services-container {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-left: 30px;
+  font-family:'Playfair Display', 'sans-serif';
+  margin-top: 17px;
+  display: flex;
+  align-self: center;
+  color: rgb(174, 166, 6);
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.service-card.flex-row {
+  flex-direction: row;
+}
+
+.service-card.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.service-video,
+.service-image {
+  width: 50%;
+  height: 500px; 
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.service-video {
+  aspect-ratio: 1 / 2; /* Makes video a perfect square */
+  object-fit: cover;
+}
+
+.service-video:hover {
+  transform: scale(1.05); /* Optional: Slight zoom-in effect */
+}
+.service-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.service-info h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+.service-info p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #eee;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column !important;
+  }
+
+  .service-video,
+  .service-image,
+  .service-info {
+    width: 100%;
+  }
+}
+
+
+.service-info {
+  width: 50%; /* Matches image width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black for the card */
+  color: #fff; /* White text for contrast */
+  border-radius: 10px;
+}
+
+.service-info h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffcc00; /* Accent color for headings */
+}
+
+.service-info p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #eee; /* Softer white for body text */
+}
+.membership-container {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px; /* Adds space below the title */
+  color: rgb(174, 166, 6);
+}
+
+.membership-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.membership-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Transparent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.membership-card.flex-row {
+  flex-direction: row;
+}
+
+.membership-card.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.membership-image {
+  width: 30%; /* Smaller image width */
+  height: 180px; /* Reduced image height */
+  object-fit: cover; /* Ensures images are cropped proportionally */
+  border-radius: 10px;
+}
+
+.membership-info {
+  width: 65%; /* Adjust text section width to balance layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black for the card */
+  color: #fff; /* White text for contrast */
+  border-radius: 10px;
+}
+
+.membership-info h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffcc00; /* Accent color for headings */
+}
+
+.membership-info p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #eee; /* Softer white for body text */
+}
+
+/* Add responsiveness */
+@media (max-width: 1024px) {
+  .membership-card {
+    flex-direction: column; /* Stacks the card vertically on medium-sized screens */
+    width: 100%; /* Makes the cards fill the container */
+  }
+  
+  .membership-info,
+  .membership-image {
+    width: 100%; /* Ensures both image and text sections take full width */
+    height: auto; /* Adjusts the image height */
+  }
+  
+  .membership-image {
+    height: 150px; /* Smaller image height on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .membership-info {
+    padding: 10px; /* Less padding on mobile */
+  }
+  
+  .membership-image {
+    height: 120px; /* Even smaller image height on mobile */
+  }
+}
+/* General Styling */
+/* General Typography */
+h1.about-title, .about-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/* About Us Section */
+.aboutus-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Transparent background */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto; /* Centers the card */
+}
+
+.aboutus-info {
+  margin-top: 20px;
+  color: #34495e;
+  text-align: center;
+}
+
+/* Text Styling */
+.aboutus-info p {
+  background-color: #626d6e; /* Grey card background */
+  color: #ffffff; /* White text */
+  padding: 20px; /* Padding inside the text card */
+  border-radius: 10px;
+  text-align: center; /* Center align text */
+  line-height: 1.8; /* Better readability */
+  font-size: 1.2rem; /* Slightly larger font */
+  margin: 20px auto; /* Center the card on the page */
+  width: 80%; /* Set a reasonable width for the card */
+}
+
+/* Certifications List */
+.certifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #86dd53;
+}
+
+.certifications-list li {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 4px solid #283d0a;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.certifications-list li:hover {
+  background-color: #596069; /* Light grey background on hover */
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80vh;
+  max-width: 800px;
+  overflow: hidden;
+  margin: 20px auto;
+  background-color: #ecf0f1; /* Grey card background */
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Styling */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 15px;
+  width: calc(100% + 15px); /* Prevents blank spaces */
+}
+
+.carousel-item {
+  flex: 1 0 calc(33.33% - 15px); /* Ensure only 3 items in the row */
+  border-radius: 15px;
+  overflow: hidden; /* Ensures content stays within the card */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.carousel-control-prev {
+  left: -50px;
+}
+
+.carousel-control-next {
+  right: -50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .aboutus-info {
+    margin-top: 10px;
+  }
+
+  .carousel-item img {
+    height: 200px; /* Reduce height for smaller screens */
+  }
+
+  .aboutus-info p {
+    width: 90%; /* Adjust card width for smaller screens */
+    font-size: 1rem; /* Slightly smaller text */
+  }
+}
+
+
+/* Card styling */
+.contactus-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #fff; /* White card background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px;
+}
+/* Gym Logo Styling */
+.form-container img {
+  width: 200px; /* Increased size of gym logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px;
+}
+
+/* Instructor Image Styling */
+.contactus-card img {
+  width: 250px; /* Increased size of instructor image */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image scales correctly */
+  border-radius: 50%; /* Keeps the circular shape */
+}
+
+/* Form container styling */
+.form-container {
+  flex: 1;
+}
+
+.cta-form h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cta-form p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Input fields and labels */
+.form__input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form__label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fdfdfd;
+  transition: all 0.3s ease;
+}
+
+.form__input:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+}
+
+/* Button styling */
+button {
+  background-color: rgb(174, 166, 6);
+  color: #fff;
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  margin-left: 600px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #899096;
+}
+
+/* Instructor image styling */
+img {
+  max-width: 100%;
+  border-radius: 50%; /* Makes the instructor image circular */
+}
+
+/* Contact info styling */
+.contact-info {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #0056b3;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .contactus-card {
+    flex-direction: row; /* Row layout on larger screens */
+  }
+
+  .form-container {
+    margin-right: 20px;
+  }
+
+  .form-container img {
+    margin-bottom: 20px;
+  }
+}
+/* Footer Styles */
+.footer {
+  background-color: #4f4848; /* Same as navbar background */
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align items */
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align content */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-family: "Playfair Display", serif; /* Elegant font */
+  font-size: 20px;
+  font-weight: bold; /* Bold title */
+  margin-bottom: 10px;
+  color: white
+}
+
+.footer-item {
+  margin-right: 7px;
+  display: flex; /* Flex container for icon and text */
+  align-items: center; /* Align icon and text */
+  font-size: 18px;
+  margin: 5px 0;
+  
+}
+
+.footer-item i {
+  margin-right: 20px; /* Space between icon and text */
+  color: rgb(174, 166, 6); /* Icon color */
+}
+
+.footer-link {
+  color: rgb(174, 166, 6); /* Match hover color for links */
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer-line {
+  margin-top: 15px;
+  font-size: 12px;
+  color: rgb(200, 200, 200); /* Subtle color for copyright text */
+}
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testimonials-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min-width */
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%; /* Ensures it doesn't exceed its container */
+  max-width: 400px; /* Optional */
+}
+
+.testimonial-text {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+
+
+.testimonial-card:nth-child(even) {
+  flex-direction: row-reverse; /* Alternate layout for even cards */
+}
+
+.testimonial-card:nth-child(odd) {
+  flex-direction: row; /* Default layout for odd cards */
+}
+
+.testimonial-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+.testimonial-image:hover {
+  transform: scale(1.1); /* Increased zoom effect */
+  filter: grayscale(0%) contrast(130%) brightness(1.3);
+}
+
+.testimonial-info {
+  flex: 1; /* Allow text to take remaining space */
+}
+
+.testimonial-feedback {
+  font-size: 1.2rem; /* Slightly increased font size */
+  color: #333; /* Darker text for better readability */
+  font-style: italic;
+  max-width: 95%;
+}
+
+.testimonials-container {
+  padding: 4rem; /* Increased padding */
+  background: #f9f9f9;
+  border-radius: 15px;
+  margin-top: 40px; /* Increased margin */
+  max-width: 95%; /* Wider container */
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonial-name{
+  color:#bce456
+}
