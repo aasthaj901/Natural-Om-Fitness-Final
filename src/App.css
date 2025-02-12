@@ -350,6 +350,9 @@ h1 {
   color: #333;
   margin-bottom: 40px; /* Adds space below the title */
   color: rgb(174, 166, 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .membership-container {
@@ -407,8 +410,7 @@ h1 {
     text-align: center;
   }
 }
-/* General Styling */
-/* General Typography */
+
 h1.about-title, .about-title {
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
@@ -449,6 +451,9 @@ h1 {
   margin-top: 17px;
   text-align: center; /* Centers the heading for better mobile view */
   color: rgb(174, 166, 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Services List */
@@ -575,13 +580,17 @@ h1 {
   font-weight: bold;
   color: rgb(174, 166, 6);
   margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Membership List */
 .membership-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
+  padding: 10px;
 }
 
 /* Membership Card */
@@ -589,15 +598,15 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 15px;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  padding: 20px;
+  padding: 15px;
 }
 
-/* Layout Adjustments */
+/* Default Layout */
 .membership-card.flex-row {
   flex-direction: row;
 }
@@ -609,8 +618,8 @@ h1 {
 /* Membership Image */
 .membership-image {
   width: 30%; 
-  height: 180px;
-  object-fit: cover; 
+  height: 150px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -620,23 +629,22 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   border-radius: 10px;
 }
 
-/* Membership Info Text */
 .membership-info h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #ffcc00;
 }
 
 .membership-info p {
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: #eee;
 }
 
@@ -645,34 +653,70 @@ h1 {
 /* Tablet Screens (1024px and below) */
 @media (max-width: 1024px) {
   .membership-card {
-    flex-direction: column; /* Stack elements */
-    align-items: center; /* Center content */
-    text-align: center; /* Center text */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .membership-info,
   .membership-image {
-    width: 90%; /* Make elements take up more space */
+    width: 85%;
     height: auto;
   }
 
   .membership-image {
-    height: 150px; /* Reduce image height */
+    height: 140px;
   }
 }
 
 /* Mobile Screens (768px and below) */
 @media (max-width: 768px) {
   .membership-card {
-    gap: 15px; /* Reduce spacing */
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
   }
 
   .membership-info {
-    padding: 15px; /* Adjust padding */
+    width: 100%;
+    padding: 12px;
+  }
+
+  .membership-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .membership-info p {
+    font-size: 0.9rem;
   }
 
   .membership-image {
-    height: 120px; /* Smaller height for small screens */
+    width: 100%;
+    height: 120px;
+  }
+}
+
+/* Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+  .membership-card {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .membership-info {
+    padding: 10px;
+  }
+
+  .membership-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .membership-info p {
+    font-size: 0.85rem;
+  }
+
+  .membership-image {
+    height: 100px;
   }
 }
 
