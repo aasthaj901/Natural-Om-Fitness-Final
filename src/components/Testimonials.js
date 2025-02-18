@@ -50,9 +50,6 @@ const Testimonials = () => {
                 healthier, more fulfilling lifestyle. Under Omkar’s expert guidance, individuals of all
                 fitness levels have unlocked their true potential, achieving remarkable physical and mental
                 transformations.
-              </p>
-              <br />
-              <p>
                 Witness his own transformation on the right to see the true extent of his determination and skill.
               </p>
             </div>
