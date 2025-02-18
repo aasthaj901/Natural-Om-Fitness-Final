@@ -1457,7 +1457,7 @@ h1 {
 /* 🌟 Mobile Screens */
 @media (max-width: 768px) {
   .transformation-content {
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.8rem;
     padding: 1rem;
   }
@@ -1469,14 +1469,14 @@ h1 {
   }
 
   .transformation-title {
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-align: center;
   }
 
   .carousel-image {
     max-width: 90%;
     height: auto;
-    max-height: 350px;
+    max-height: 450px
   }
 
   .carousel-btn {
