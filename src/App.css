@@ -1488,7 +1488,7 @@ h1 {
 /* Extra Small Screens */
 @media (max-width: 480px) {
   .transformation-content {
-    gap: 0.5rem;
+   
     padding: 0.5rem;
   }
 
@@ -1499,14 +1499,17 @@ h1 {
   }
 
   .transformation-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
   }
 
   .carousel-image {
     max-width: 100%;
     height: auto;
-    max-height: 300px;
+    max-height: 400px;
+  }
+  .carousel-container{
+    max-width: 100%;
   }
 
   .carousel-btn {
