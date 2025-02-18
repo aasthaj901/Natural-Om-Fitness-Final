@@ -1,9 +1,15 @@
 import React, { useState } from "react";
+import { Helmet } from 'react-helmet';
+
+
+
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import client1 from "../assets/img/client1.png";
 import client2 from "../assets/img/client2.jpg";
 import client3 from "../assets/img/client3.jpg";
-
+<Helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</Helmet> 
 const Testimonials = () => {
   const testimonials = [
     {
