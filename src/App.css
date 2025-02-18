@@ -360,7 +360,7 @@ h1 {
 /* Small screens */
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.4rem; /* Prevents tilting on small iPhone screens */
+    font-size: 1rem; /* Prevents tilting on small iPhone screens */
     margin-bottom: 20px;
   }
 }
@@ -420,14 +420,7 @@ h1 {
   }
 }
 
-h1.about-title, .about-title {
-  font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: rgb(174, 166, 6);
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
+
 
 h3 {
   font-size: 2rem;
@@ -453,7 +446,7 @@ p {
 
 /* Heading */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.5rem;  /* Default font size */
   font-weight: bold;
   margin-left: 30px;
   font-family: 'Playfair Display', 'sans-serif';
@@ -463,6 +456,30 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;  /* Adjust font size for tablets */
+    margin-left: 20px; /* Adjust margin for better alignment */
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;  /* Smaller font size for mobile screens */
+    margin-left: 15px; /* Adjust margin for better mobile view */
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;  /* Even smaller font size for small mobile screens */
+    margin-left: 10px; /* Adjust margin further for small screens */
+  }
 }
 
 /* Services List */
