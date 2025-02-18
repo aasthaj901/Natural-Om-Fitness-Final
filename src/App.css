@@ -1488,7 +1488,7 @@ h1 {
 /* Extra Small Screens */
 @media (max-width: 480px) {
   .transformation-content {
-   
+    max-width: 100%;
     padding: 0.5rem;
   }
 
