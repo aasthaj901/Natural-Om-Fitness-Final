@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 import { useEffect } from "react";
+import { Helmet } from 'react-helmet';
+
+
 
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -28,7 +31,7 @@ function App() {
        <ScrollToTop />
 
       <Navbar />
-      <Routes>
+      <Routes> 
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/testimonials" element={<Testimonials />} />
@@ -36,7 +39,10 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/membership" element={<Membership />} />
         
-      </Routes> 
+      </Routes>  
+      <Helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</Helmet>
       <Services />
       <Membership />
       <Testimonials />

@@ -1354,7 +1354,16 @@ h1 {
   font-weight: bold;
   font-size: 1.2rem;
 }
-/* Adjust the transformation section */
+
+/* General Styles */
+.transformation-section {
+  background: #f9f9f9;
+  padding: 3rem;
+  border-radius: 15px;
+  max-width: 1260px;
+  margin: 40px auto;
+}
+
 .transformation-content {
   display: flex;
   flex-direction: column;
@@ -1364,171 +1373,110 @@ h1 {
   gap: 1rem;
 }
 
-/* Make sure text stays readable */
 .transformation-text-box {
-  max-width: 90%;
+  max-width: 95%;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 1.2rem; /* Adjusted font size to match testimonials */
+  color: #333;
+  margin: 0 auto;
+  font-style: italic;
 }
 
-/* Keep the title size reasonable */
-.transformation-title {
-  font-size: 1.3rem;
+.transformation-card-transparent {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Fix carousel display */
-.carousel-container {
+.transformation-images {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 380px; /* Adjust to ensure it stays visible */
-  margin: 0 auto;
+  gap: 50px;
+  margin-top: 2rem;
 }
 
-/* Prevent images from shrinking too much */
-.carousel-image {
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  max-height: 320px;
+.transformation-image {
+  width: 350px;
+  height: 450px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
-.transformation-section {
-  background: #f9f9f9;
-  padding: 3rem;
-  border-radius: 15px;
-  max-width: 1260px; /* Increased width */
-  margin: 40px auto;
+.transformation-image:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%) contrast(130%) brightness(1.3);
 }
 
-/* 🌟 Base Styling */
+/* Responsiveness */
 
-/* Carousel Buttons */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  z-index: 10;
-}
-
-.carousel-btn.prev {
-  left: 5px;
-}
-
-.carousel-btn.next {
-  right: 5px;
-}
-
-.carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-/* 🌟 Tablets & Medium Screens */
+/* Tablets & Medium Screens */
 @media (max-width: 1024px) {
-  .transformation-content {
+  .transformation-images {
     flex-direction: column;
-    text-align: center;
-    gap: 1rem;
+    gap: 30px;
+  }
+
+  .transformation-image {
+    width: 80%;
+    height: auto;
   }
 
   .transformation-text-box {
-    max-width: 90%;
-    padding: 1.2rem;
-    text-align: center;
+    max-width: 98%;
+    
+    font-size: 1.1rem; /* Slightly smaller font */
   }
 
-  .transformation-carousel {
-    max-width: 90%;
+  .transformation-card-transparent {
+    padding: 1.5rem;
+  }
+
+  .transformation-section h1 {
+    font-size: 2rem; /* Adjusted title size */
   }
 }
 
-/* 🌟 Mobile Screens (Tablets & Small Laptops) */
+/* Mobile Screens */
 @media (max-width: 768px) {
-  .transformation-content {
+  .transformation-section {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .transformation-images {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-    gap: 1rem;
+    gap: 30px;
+  }
+
+  .transformation-image {
+    width: 100%;
+    height: auto;
   }
 
   .transformation-text-box {
-    max-width: 90%;
-    padding: 1rem;
+    max-width: 1000px;
     font-size: 1rem;
+     /* Smaller font size */
   }
 
-  .transformation-title {
-    font-size: 1.2rem;
+  .transformation-text-box p {
+    font-size: 0.95rem;
   }
 
-  .carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  .transformation-card-transparent {
+    padding: 1.5rem;
   }
 
-  .carousel-image {
-    width: 90%;
-    max-width: 100%;
-    height: auto;
-    max-height: 320px; /* Adjusted */
-    object-fit: contain;
-    border-radius: 8px;
-    display: block; /* Fix for disappearing images */
-  }
-
-  .carousel-btn {
-    padding: 8px;
-    font-size: 1rem;
-  }
-}
-
-/* 🌟 Extra Small Screens (Phones) */
-@media (max-width: 480px) {
   .transformation-content {
-    max-width: 100%;
-    padding: 0.5rem;
-    gap: 0.5rem;
+    padding: 1rem;
+    gap: 1.5rem;
+    max-width: 90%;
   }
 
-  .transformation-text-box {
-    max-width: 95%;
-    padding: 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  .transformation-title {
-    font-size: 1rem;
-  }
-
-  .carousel-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .carousel-image {
-    width: 100%;
-    height: auto;
-    max-height: 250px; /* Adjusted */
-    object-fit: contain;
-    border-radius: 6px;
-    display: block; /* Fix for disappearing images */
-  }
-
-  .carousel-btn {
-    padding: 6px;
-    font-size: 0.9rem;
+  .transformation-section h1 {
+    font-size: 1.6rem; /* Adjusted title size for mobile */
   }
 }

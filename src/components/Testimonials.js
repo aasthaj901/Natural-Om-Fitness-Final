@@ -1,15 +1,8 @@
-import React, { useState } from "react";
-import { Helmet } from 'react-helmet';
-
-
-
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import React from "react";
 import client1 from "../assets/img/client1.png";
 import client2 from "../assets/img/client2.jpg";
 import client3 from "../assets/img/client3.jpg";
-<Helmet>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</Helmet> 
+
 const Testimonials = () => {
   const testimonials = [
     {
@@ -30,15 +23,6 @@ const Testimonials = () => {
   ];
 
   const transformationImages = [client1, client2, client3];
-  const [currentImage, setCurrentImage] = useState(0);
-
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % transformationImages.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + transformationImages.length) % transformationImages.length);
-  };
 
   return (
     <div className="testimonials-container mt-5">
@@ -53,39 +37,38 @@ const Testimonials = () => {
           </div>
         ))}
       </div>
+
       {/* Transformation Section */}
       <div className="transformation-section">
         <h1>Transformation</h1>
         <div className="transformation-content">
           {/* Text Section */}
           <div className="transformation-text-box">
-            <div className="transformation-card">
+            <div className="transformation-card-transparent">
               <p>
                 Transforming your body and mind is more than just an aesthetic goal—it’s about embracing a
                 healthier, more fulfilling lifestyle. Under Omkar’s expert guidance, individuals of all
                 fitness levels have unlocked their true potential, achieving remarkable physical and mental
                 transformations.
               </p>
+              
+              <br />
               <p>
-                His approach is holistic, focusing not just on intense workouts, but also on
-                sustainable habits, mindful eating, and mental resilience. Whether you’re looking to lose weight,
-                gain muscle, improve endurance, or enhance overall well-being, Omkar tailors personalized programs
-                to suit your unique goals.
-              </p> 
-              <p>
-                Witness his own transformation on the right to see the true extent of his determination and skill. 
+                Witness his own transformation on the right to see the true extent of his determination and skill.
               </p>
             </div>
           </div>
-          {/* Carousel Section */}
-          <div className="transformation-carousel">
-            <button className="carousel-btn prev" onClick={prevImage}>
-              <FaChevronLeft />
-            </button>
-            <img src={transformationImages[currentImage]} alt="Transformation" className="carousel-image" />
-            <button className="carousel-btn next" onClick={nextImage}>
-              <FaChevronRight />
-            </button>
+
+          {/* Images Section (Removed carousel, just display 3 images) */}
+          <div className="transformation-images">
+            {transformationImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Transformation ${index + 1}`}
+                className="transformation-image"
+              />
+            ))}
           </div>
         </div>
       </div>
