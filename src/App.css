@@ -1376,6 +1376,9 @@ h1 {
 .transformation-content {
   display: flex;
   flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 3rem;
   width: 100%;
 }
