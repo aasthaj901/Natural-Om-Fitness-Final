@@ -350,7 +350,20 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Slightly smaller */
+    margin-bottom: 30px;
+  }
+}
 
+/* Small screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem; /* Prevents tilting on small iPhone screens */
+    margin-bottom: 20px;
+  }
+}
 .membership-container {
   padding: 20px;
   text-align: center;
@@ -1287,6 +1300,10 @@ button:hover {
   .testimonials-list {
     grid-template-columns: 1fr;
   }
+  .testimonials-h1 {
+    font-size: 1.4rem; /* Smaller title */
+    text-align: center;
+  }
 
   .testimonial-card {
     flex-direction: column;
@@ -1421,17 +1438,18 @@ h1 {
 @media (max-width: 1024px) {
   .transformation-content {
     flex-direction: column;
+    align-items: center; /* Centers content */
     text-align: center;
   }
 
   .transformation-text-box {
-    max-width: 90%;
+    max-width: 80%; /* Slightly wider */
     padding: 1.5rem;
     text-align: center;
   }
 
   .transformation-carousel {
-    max-width: 90%;
+    max-width: 80%;
   }
 }
 
@@ -1441,30 +1459,38 @@ h1 {
   }
 
   .transformation-text-box {
+    max-width: 95%; /* Wider box */
     padding: 1rem;
   }
 
   .carousel-image {
-    max-width: 320px;
+    max-width: 350px; /* Larger image for clarity */
   }
 
   .carousel-btn {
     padding: 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
   .transformation-section {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .transformation-text-box {
-    padding: 0.8rem;
+    max-width: 95%; /* Even wider for better readability */
+    padding: 1rem;
+  }
+
+  .transformation-title {
+    font-size: 1.4rem; /* Smaller title */
+    text-align: center;
   }
 
   .carousel-image {
-    max-width: 280px;
+    max-width: 300px;
+    max-height: 290px; /* Slightly bigger for clarity */
   }
 
   .carousel-btn {
