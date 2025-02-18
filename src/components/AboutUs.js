@@ -7,6 +7,7 @@ import Om5 from "../assets/img/om5.jpg";
 import Om6 from "../assets/img/om6.jpg";
 import Om7 from "../assets/img/om7.jpg";
 import InstructorImg from "../assets/img/instructor.jpg";
+import CertificateImg from "../assets/img/certificate.jpg";
 
 const AboutUs = () => {
   const images = [InstructorImg, Om1, Om2, Om3, Om4, Om5, Om6, Om7];
@@ -15,17 +16,13 @@ const AboutUs = () => {
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + imagesToShow >= images.length
-        ? 0
-        : prevIndex + 1
+      prevIndex + imagesToShow >= images.length ? 0 : prevIndex + 1
     );
   };
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex - 1 < 0
-        ? images.length - imagesToShow
-        : prevIndex - 1
+      prevIndex - 1 < 0 ? images.length - imagesToShow : prevIndex - 1
     );
   };
 
@@ -39,30 +36,16 @@ const AboutUs = () => {
         {/* Carousel */}
         <div className="carousel-container">
           <div className="carousel">
-            {images
-              .slice(currentIndex, currentIndex + imagesToShow)
-              .map((img, index) => (
-                <div className="carousel-item" key={index}>
-                  <img
-                    src={img}
-                    className="d-block w-100 rounded"
-                    alt={`Instructor ${index + 1}`}
-                  />
-                </div>
-              ))}
+            {images.slice(currentIndex, currentIndex + imagesToShow).map((img, index) => (
+              <div className="carousel-item" key={index}>
+                <img src={img} className="d-block w-100 rounded" alt={`Instructor ${index + 1}`} />
+              </div>
+            ))}
           </div>
-          <button
-            className="carousel-control-prev"
-            onClick={handlePrev}
-            aria-label="Previous"
-          >
+          <button className="carousel-control-prev" onClick={handlePrev} aria-label="Previous">
             &#8249;
           </button>
-          <button
-            className="carousel-control-next"
-            onClick={handleNext}
-            aria-label="Next"
-          >
+          <button className="carousel-control-next" onClick={handleNext} aria-label="Next">
             &#8250;
           </button>
         </div>
@@ -71,40 +54,25 @@ const AboutUs = () => {
         <div className="aboutus-info text-center mt-4">
           <h3 className="text-dark font-weight-bold">Omkar Koli</h3>
           <p>
-            Om is a highly qualified fitness expert with over a decade of
-            experience in transforming lives through fitness. He specializes in
-            strength training, yoga, and personalized nutrition plans, helping
-            individuals achieve their health goals.
-          
-            His sessions are tailored to each individual’s needs, from beginners
-            looking to get started to seasoned athletes aiming to refine their
-            skills. Om’s dedication, motivational methods, and expertise create
-            a supportive environment for all.
+            Om is a highly qualified fitness expert with over a decade of experience in transforming lives through fitness.
+            He specializes in strength training, yoga, and personalized nutrition plans, helping individuals achieve their health goals.
+            His sessions are tailored to each individual’s needs, from beginners looking to get started to seasoned athletes aiming to refine their skills.
+            Om’s dedication, motivational methods, and expertise create a supportive environment for all.
           </p>
         </div>
 
         {/* Certifications Section */}
         <h1 className="mt-5 mb-4 text-center">Certifications & Registrations</h1>
-        <ul className="certifications-list p-3">
-          <li>
-            <strong>K11 Diploma in Personal Training Certificate</strong>
-            (REPS Category A - Personal Trainer)
-            <br />
-            Certificate from Accrediting Body - PD: Approval, UK
-          </li>
-          <li>
-            <strong>NSQF Level - 4 (Fitness Trainer)  </strong>
-            Certificate from SPEFL-SC
-          </li>
-          <li>
-            <strong>Trauma Response Certificate  </strong>
-            from Australian Lifesaving Academy
-          </li>
-          <li>
-            <strong>Full Membership with REPS India   </strong>
-            under Category A (Personal Trainer)
-          </li>
-        </ul>
+        <div className="certifications-container d-flex justify-content-between align-items-center">
+          <ul className="certifications-list p-3 w-50">
+            <li><strong>K11 Diploma in Personal Training Certificate</strong> (REPS Category A - Personal Trainer)<br />Certificate from Accrediting Body - PD: Approval, UK</li>
+            <li><strong>NSQF Level - 4 (Fitness Trainer)</strong> Certificate from SPEFL-SC</li>
+            <li><strong>Trauma Response Certificate</strong> from Australian Lifesaving Academy</li>
+            <li><strong>Full Membership with REPS India</strong> under Category A (Personal Trainer)</li>
+          </ul>
+          <img src={CertificateImg} alt="Certification" className="certificate-image rounded shadow" />
+
+              </div>
       </div>
     </div>
   );

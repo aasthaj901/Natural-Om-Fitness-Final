@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const Home = () => {
@@ -18,14 +18,29 @@ const Home = () => {
     }
   };
 
+  const [hoveredBubble, setHoveredBubble] = useState(null);
+
+  const bubbles = [
+    {
+      defaultText: "100% Natural:No Steroids",
+      hoverText: "Our approach is completely natural with no artificial enhancers."
+    },
+    {
+      defaultText: "No Medicines for Transformation",
+      hoverText: "Achieve your transformation through dedication and hard work."
+    },
+    {
+      defaultText: "No Chemicals, Just Hard Work",
+      hoverText: "No chemicals, just consistent effort and discipline."
+    }
+  ];
 
   return (
     <>
       <style>
         {`
-          @import url('https://fonts.googleapis.com/css2?family=Aeriel :wght@400;600&display=swap');
-
-          @keyframes fadeIn {
+          @import url('https://fonts.googleapis.com/css2?family=Aeriel:wght@400;600&display=swap');
+             @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(20px); }
             100% { opacity: 1; transform: translateY(0); }
           }
@@ -79,42 +94,43 @@ const Home = () => {
             margin-top: 2rem;
           }
 
-           .bubble-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 30px;
-  
-}
+          .bubble-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            gap: 39px;
+          }
 
-.bubble { 
-  margin-right: 20px;
-  width: 160px;  /* Increased size */
-  height: 160px;
-  margin-top: 20px;
-  background-color: rgba(40, 167, 69, 0.3); /* Translucent green */
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  border-radius: 50%;
-  border: 3px solid #dfff00; /* Neon greenish-yellow border */
-  box-shadow: 0 0 10px #dfff00; /* Neon glow effect */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+          .bubble { 
+            width: 180px;
+            height: 180px;
+            background-color: rgba(40, 167, 69, 0.3);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 15px;
+            line-height: 1.3;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 10px white;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          }
 
-.bubble:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px #dfff00, 0 0 30px #dfff00; /* Brighter glow on hover */
-}
-          
+          .bubble:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px white;
+          }
 
-          .bubble:nth-child(1) { animation-delay: 0s; }
-          .bubble:nth-child(2) { animation-delay: 0.5s; }
-          .bubble:nth-child(3) { animation-delay: 1s; }
+          .bubble-text {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+          }
         `}
       </style>
 
@@ -125,7 +141,7 @@ const Home = () => {
         </h2>
 
         <p className="animate-text">
-          Are you ready to elevate your fitness journey? Join our expert personal
+        Are you ready to elevate your fitness journey? Join our expert personal
           trainer as they share unique strategies and techniques for achieving
           natural fitness goals without the use of harsh supplements. Learn the
           importance of balanced nutrition, functional exercises, and mental
@@ -145,12 +161,19 @@ const Home = () => {
 
         {/* Bubbles Highlighting Natural Fitness */}
         <div className="bubble-container">
-          <div className="bubble">No Steroids</div>
-          <div className="bubble">No Medicines</div>
-          <div className="bubble">No Chemicals</div>
-        </div>
-
-        {/* Instagram Footer */}
+          {bubbles.map((bubble, index) => (
+            <div
+              key={index}
+              className="bubble"
+              onMouseEnter={() => setHoveredBubble(index)}
+              onMouseLeave={() => setHoveredBubble(null)}
+            >
+              <span className="bubble-text">
+                {hoveredBubble === index ? bubble.hoverText : bubble.defaultText}
+              </span>
+            </div>
+          ))}
+        </div> 
         <div className="instagram-container animate-text">
           <a
             href="https://www.instagram.com/natural_om_fitness?igsh=MXNucWU0enRzMjhxbA=="
@@ -179,7 +202,6 @@ const Home = () => {
         </div>
       </div>
     </>
-
   );
 };
 

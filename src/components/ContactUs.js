@@ -47,7 +47,7 @@ const ContactUs = () => {
             src={NaturalLogo}
             alt="Gym Logo"
             className="img-fluid mb-4"
-            style={{ width: "400px", height: "auto" }}
+            style={{ width: "600px", height: "auto" }}
           />
 
           <div className="cta-form">
