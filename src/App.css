@@ -729,16 +729,36 @@ h1 {
   }
 }
 
-/* General Styling */
-/* General Typography */
 h1.about-title, .about-title {
   font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
+  font-size: 2.5rem;  /* Default font size */
   font-weight: bold;
   color: rgb(174, 166, 6);
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  h1.about-title, .about-title {
+    font-size: 2rem;  /* Smaller font for tablets */
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  h1.about-title, .about-title {
+    font-size: 1.6rem;  /* Smaller font for mobile screens */
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  h1.about-title, .about-title {
+    font-size: 1.4rem;  /* Even smaller font for small mobile screens */
+  }
+}
+
 
 h3 {
   font-size: 2rem;
@@ -849,7 +869,10 @@ p {
   .certifications-list {
     width: 90%; /* Take most of the screen width */
   }
+   .certifications-h1{
+    font-size: 1.5rem;
 
+   }
   .certificate-image {
     max-width: 80%; /* Keep the image smaller on small screens */
     max-height: 200px;
@@ -864,7 +887,10 @@ p {
   .certifications-list {
     font-size: 0.9rem; /* Reduce font size for smaller screens */
   }
+  .certifications-h1{
+    font-size: 1rem;
 
+   }
   .certificate-image {
     max-width: 70%; /* Further reduce image size */
     max-height: 180px;
