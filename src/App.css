@@ -1374,12 +1374,13 @@ h1 {
 }
 
 .transformation-text-box {
-  max-width: 95%;
+  width: 100%; /* Full width */
   padding: 1rem;
-  font-size: 1.2rem; /* Adjusted font size to match testimonials */
+  font-size: 1.2rem;
   color: #333;
   margin: 0 auto;
   font-style: italic;
+  text-align: center; /* Center text */
 }
 
 .transformation-card-transparent {
@@ -1392,14 +1393,15 @@ h1 {
 
 .transformation-images {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  flex-direction: column; /* Stack images vertically */
+  gap: 30px;
   margin-top: 2rem;
+  width: 100%; /* Ensure images take full width */
 }
 
 .transformation-image {
-  width: 350px;
-  height: 450px;
+  width: 100%; /* Full width images */
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -1415,27 +1417,29 @@ h1 {
 /* Tablets & Medium Screens */
 @media (max-width: 1024px) {
   .transformation-images {
-    flex-direction: column;
+    flex-direction: column; /* Stack images vertically */
     gap: 30px;
+    width: 100%; /* Full width for images */
   }
 
   .transformation-image {
-    width: 80%;
+    width: 100%; /* Full width images */
     height: auto;
   }
 
   .transformation-text-box {
-    max-width: 98%;
-    
-    font-size: 1.1rem; /* Slightly smaller font */
+    width: 100%; /* Full width for text box */
+    font-size: 1.1rem;
+    text-align: left; /* Align text to left for readability */
   }
 
   .transformation-card-transparent {
     padding: 1.5rem;
+    width: 100%;
   }
 
   .transformation-section h1 {
-    font-size: 2rem; /* Adjusted title size */
+    font-size: 2rem; /* Adjust title size */
   }
 }
 
@@ -1443,23 +1447,24 @@ h1 {
 @media (max-width: 768px) {
   .transformation-section {
     padding: 1rem;
-    max-width: 100%;
+    width: 100%; /* Full width for section */
   }
 
   .transformation-images {
-    flex-direction: column;
+    flex-direction: column; /* Stack images vertically */
     gap: 30px;
+    width: 100%; /* Full width for images */
   }
 
   .transformation-image {
-    width: 100%;
+    width: 100%; /* Full width images */
     height: auto;
   }
 
   .transformation-text-box {
-    max-width: 1000px;
-    font-size: 1rem;
-     /* Smaller font size */
+    width: 100%; /* Full width for text box */
+    font-size: 1rem; /* Smaller font */
+    text-align: left; /* Align text to left */
   }
 
   .transformation-text-box p {
@@ -1468,12 +1473,13 @@ h1 {
 
   .transformation-card-transparent {
     padding: 1.5rem;
+    width: 100%;
   }
 
   .transformation-content {
     padding: 1rem;
     gap: 1.5rem;
-    max-width: 90%;
+    width: 100%; /* Full width for content */
   }
 
   .transformation-section h1 {
