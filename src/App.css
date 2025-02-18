@@ -1354,6 +1354,47 @@ h1 {
   font-weight: bold;
   font-size: 1.2rem;
 }
+/* Adjust the transformation section */
+.transformation-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Make sure text stays readable */
+.transformation-text-box {
+  max-width: 90%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+/* Keep the title size reasonable */
+.transformation-title {
+  font-size: 1.3rem;
+}
+
+/* Fix carousel display */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 380px; /* Adjust to ensure it stays visible */
+  margin: 0 auto;
+}
+
+/* Prevent images from shrinking too much */
+.carousel-image {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 .transformation-section {
   background: #f9f9f9;
@@ -1364,49 +1405,6 @@ h1 {
 }
 
 /* 🌟 Base Styling */
-.transformation-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  text-align: left;
-  max-width: 90%;
-  margin: 0 auto;
-  gap: 1.5rem;
-}
-
-/* Text Box */
-.transformation-text-box {
-  flex: 1;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  max-width: 550px;
-}
-
-/* Carousel */
-.transformation-carousel {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  max-width: 500px;
-  max-height: 450px;
-  overflow: hidden;
-}
-
-/* Image Styling */
-.carousel-image {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 /* Carousel Buttons */
 .carousel-btn {
